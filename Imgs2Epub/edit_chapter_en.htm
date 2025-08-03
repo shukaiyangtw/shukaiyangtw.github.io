@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="en-us" />
+    <title>Album EPUB Studio - shukaiyangtw.github.io</title>
+    <link rel="stylesheet" href="../style.css" type="text/css" />
+    <link rel="stylesheet" href="../style_toc.css" type="text/css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+    <link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <script type="text/javascript">
+
+        function onTocClicked()
+        {
+            let toc = document.getElementById("toc_div");
+            if (toc.style.display == "block") {  toc.style.display = "none";  }
+            else {  toc.style.display = "block";  }
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+<div id="page_container">
+    <div id="action_bar_row">
+        <div id="action_bar">
+
+            <div class="action_bar_button">
+                <a href="index_en.htm"><img src="../images/back.png" /></a>
+                <a class="action_bar_textlink" href="index_en.htm">Introduction</a>
+            </div>
+
+            <div id="toc_button" class="action_bar_button">
+                <a href="javascript: onTocClicked();"><img src="../images/toc.png" /></a>
+                <a class="action_bar_textlink" href="javascript: onTocClicked();">Topics</a>
+            </div>
+
+            <div class="action_bar_title">
+                Album EPUB Studio User Manual
+            </div>
+
+            <div class="action_bar_button">
+                <a href="index_zh.htm"><img src="../images/lang.png" /></a>
+                <a class="action_bar_textlink" href="edit_chapter_zh.htm">中文</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="context_row">
+        <div class="context_wrapper" style="position: relative">
+
+        <div id="toc_div">
+            <ul>
+                <li><a id="toc_overview" href="manual_en.htm">Overview</a>
+                    <ul class="subtitles">
+                        <li><a href="manual_en.htm#WhatsEPUB">What's an EPUB File</a>?</li>
+                        <li><a href="manual_en.htm#WhatsAlbumEPUB">What's an Album EPUB File</a>?</li>
+                    </ul>
+                </li>
+
+                <li><a id="toc_new_album" href="new_album_en.htm">Create a New Album</a>
+                    <ul class="subtitles">
+                        <li><a href="new_album_en.htm#NewAlbumPrj">New an Album Project</a>.</li>
+                        <li><a href="new_album_en.htm#FillAlbumInfo">Fill the Album Info</a>.</li>
+                        <li><a href="new_album_en.htm#RenameChapter">Edit the Title of a New Chapter</a>.</li>
+                        <li><a href="new_album_en.htm#AddChapter">Add or Delete Chapters</a>.</li>
+                    </ul>
+                </li>
+
+                <li><a id="toc_edit_chapter" class="toc_current" href="edit_chapter_en.htm">Edit the Chapter</a>
+                    <ul class="subtitles">
+                        <li><a href="edit_chapter_en.htm#EditChapter">Enter the Chapter Editing</a>.</li>
+                        <li><a href="edit_chapter_en.htm#AddPhotos">Edit the Text and Add Photos</a>.</li>
+                        <li><a href="edit_chapter_en.htm#AddParagraph">Add or Delete Paragraphs</a>.</li>
+                        <li><a href="edit_chapter_en.htm#Reorder">Reorder Photos and Paragraphs</a>.</li>
+                    </ul>
+                </li>
+
+                <li><a id="toc_edit_photo" href="edit_photo_en.htm">Modify a Photo</a></li>
+                <li><a id="toc_create_cover" href="create_cover_en.htm">Create the Album Cover</a></li>
+
+                <li><a id="toc_export_epub" href="export_epub_en.htm">Exportation and Importation</a>
+                    <ul class="subtitles">
+                        <li><a href="export_epub_en.htm#Export">Export to an EPUB File or Website</a>.</li>
+                        <li><a href="export_epub_en.htm#Import">Import an Album EPUB File</a>.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="content_div">
+            <h1>Edit the Chapter</h1>
+
+            <p>As mentioned, the chapters in an EPUB book are basically web pages. A page usually contains headings (h1 and h2 headings) and many paragraphs. In the user interface of the software, a paragraph consists of a brief description and a set of photos. The photos in a paragraph are usually taken at the same date and location. On the generated page, every paragraph shows the text description followed by the thumbnails of photos. Between the paragraphs, there can be optional sub-headings.</p>
+
+            <h2><a name="EditChapter">Enter the Chapter Editing</a></h2>
+
+            <p>In the album info window, as shown below, (1) pick the chapter to be edited in the table of contents, then (2) click the toolbar button <img class="inline_img" src="edit.png" /><b>Edit the Chapter</b>, or just double click on the chapter. You enter the chapter-editing window. </p>
+
+            <p class="figure">
+                <img src="mainpage_edit_en.png" style="width: 720px" />
+            </p>
+
+            <p>When a new chapter is created by the software, a new blank paragraph is also created for the user to add content immediately.</p>
+
+            <h2><a name="AddPhotos">Edit the Text and Add Photos</a></h2>
+
+            <p>The chapter-editing window is shown below. In the left is the list of paragraphs, and in the right is the content of the selected paragraph. The first photo in a paragraph is shown in the left list, and the editable content of a paragraph is shown in the right including the date and location, the text description, and the photos.</p>
+
+            <p class="figure">
+                <img src="chapterpage_en.png" />
+            </p>
+
+            <p>To add content in a paragraph, first (1) pick the paragraph in the left list, (2) you can give a subheading to the paragraph optionally. (3) Check the box if you want to display the date and pick the data by the calendar. (4) Check the box if you want to display the location and fill the text field. (5) Write a brief text description of the photos. (6) Click the toolbar button <img class="inline_img" src="import.png" /><b>Add Photo Files</b> to browse photo files, of just drag and drop photo files in the photo set area. You can pick or drag multiple photo files, then the software generates the thumbnails automatically. Anytime, you can preview the result page by toolbar button <img class="inline_img" src="preview.png" /><b>Preview the Album</b>. If you want to delete a photo from the paragraph, pick it and click the toolbar button <img class="inline_img" src="trash.png" /><b>Delete the Photo</b>.</p>
+
+            <p class="figure">
+                <img src="chapterpage_1pic_en.png" style="width: 720px" /><br />
+                <img src="chapterpage_2pics_en.png" style="width: 720px" /><br />
+                <img src="chapterpage_3pics_en.png" style="width: 720px" />
+            </p>
+
+            <p>As the shown preview, the software decides the size of thumbnails according the amount of photos. For typesetting, the software makes 2:1 thumbnails for landscape photos, and makes 1:2 thumbnails for portrait photos. Clicking on a thumbnail shows the original photo in both the preview and the generated EPUB book.</p>
+
+            <h2><a name="AddParagraph">Add or Delete Paragraphs</a></h2>
+
+            <p>To add a new paragraph in the chapter, as shown below, just (1) click the toolbar button <img class="inline_img" src="add.png" /><b>New Paragraph</b>, then a new blank paragraph is appended to the list. (2) Click the new paragraph, then you can fill the content and add photos in the right area. If you want to delete some paragraph, click the paragraph in the list and click toolbar button <img class="inline_img" src="delete.png" /><b>Delete this Paragraph</b>.</p>
+
+            <p class="figure">
+                <img src="chapterpage_2p_en.png" />
+            </p>
+
+            <p>In the previous example, the heading of paragraph is left blank. In this case, you (3) filled the heading, then you can <img class="inline_img" src="preview.png" /><b>Previewthe Album</b> as shown below.</p>
+
+            <p class="figure">
+                <img src="chapterpage_preview_en.png" />
+            </p>
+
+            <h2><a name="Reorder">Reorder Photos and Paragraphs</a></h2>
+
+            <p>In the chapter-editing window, the user can reorder the photos and paragraphs by mouse dragging. You can (1) move a paragraph by dragging it in the left list. You can (2) move a photo dragging it in the photo set. And you can (3) move a photo to another paragraph by dragging it into the paragraph in the left list. After dragging, you can <img class="inline_img" src="preview.png" /><b>Previewthe Album</b> immediately.</p>
+
+            <p class="figure">
+                <img src="chapterpage_drag_en.png" />
+            </p>
+
+            <p>There are more functions for individual photo in the next topic.</p>
+
+            <p style="text-align:center"><a class="next_button" href="edit_photo_en.htm">Next: Modify a Photo</a></p>
+        </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

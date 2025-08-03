@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="zh-tw" />
+    <title>Album EPUB Studio - shukaiyangtw.github.io</title>
+    <link rel="stylesheet" href="../style.css" type="text/css" />
+    <link rel="stylesheet" href="../style_toc.css" type="text/css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+    <link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <script type="text/javascript">
+
+        function onTocClicked()
+        {
+            let toc = document.getElementById("toc_div");
+            if (toc.style.display == "block") {  toc.style.display = "none";  }
+            else {  toc.style.display = "block";  }
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+<div id="page_container">
+    <div id="action_bar_row">
+        <div id="action_bar">
+
+            <div class="action_bar_button">
+                <a href="index_zh.htm"><img src="../images/back.png" /></a>
+                <a class="action_bar_textlink" href="index_zh.htm">介紹</a>
+            </div>
+
+            <div id="toc_button" class="action_bar_button">
+                <a href="javascript: onTocClicked();"><img src="../images/toc.png" /></a>
+                <a class="action_bar_textlink" href="javascript: onTocClicked();">目錄</a>
+            </div>
+
+            <div class="action_bar_title">
+                Album EPUB Studio 使用者手冊
+            </div>
+
+            <div class="action_bar_button">
+                <a href="index_en.htm"><img src="../images/lang.png" /></a>
+                <a class="action_bar_textlink" href="edit_chapter_en.htm">English</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="context_row">
+        <div class="context_wrapper" style="position: relative">
+
+        <div id="toc_div">
+            <ul>
+                <li><a id="toc_overview" href="manual_zh.htm">概觀</a>
+                    <ul class="subtitles">
+                        <li><a href="manual_zh.htm#WhatsEPUB">什麼是EPUB檔案</a>.</li>
+                        <li><a href="manual_zh.htm#WhatsAlbumEPUB">什麼是相簿EPUB檔案</a>.</li>
+                    </ul>
+                </li>
+
+                <li><a id="toc_new_album" href="new_album_zh.htm">建立新相簿</a>
+                    <ul class="subtitles">
+                        <li><a href="new_album_zh.htm#NewAlbumPrj">新建相簿專案</a>.</li>
+                        <li><a href="new_album_zh.htm#FillAlbumInfo">填寫相簿資訊</a>.</li>
+                        <li><a href="new_album_zh.htm#RenameChapter">更改新篇章的標題</a>.</li>
+                        <li><a href="new_album_zh.htm#AddChapter">新增或刪除其他篇章</a>.</li>
+                    </ul>
+                </li>
+
+                <li><a id="toc_edit_chapter" class="toc_current" href="edit_chapter_zh.htm">編輯篇章內容</a>
+                    <ul class="subtitles">
+                        <li><a href="edit_chapter_zh.htm#EditChapter">進入篇章的編輯畫面</a>.</li>
+                        <li><a href="edit_chapter_zh.htm#AddPhotos">編輯段落並加入照片</a>.</li>
+                        <li><a href="edit_chapter_zh.htm#AddParagraph">新增或刪除其他段落</a>.</li>
+                        <li><a href="edit_chapter_zh.htm#Reorder">調整照片或段落的順序</a>.</li>
+                    </ul>
+                </li>
+
+                <li><a id="toc_edit_photo" href="edit_photo_zh.htm">調整照片</a></li>
+                <li><a id="toc_create_cover" href="create_cover_zh.htm">製作相簿封面</a></li>
+
+                <li><a id="toc_export_epub" href="export_epub_zh.htm">匯出與匯入</a>
+                    <ul class="subtitles">
+                        <li><a href="export_epub_zh.htm#Export">匯出 EPUB 或網頁檔案</a>.</li>
+                        <li><a href="export_epub_zh.htm#Import">匯入相簿 EPUB 檔案</a>.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="content_div">
+            <h1>編輯篇章內容</h1>
+
+            <p>如前所述，EPUB 電子書中的篇章(chapter)基本上就是網頁，而網頁中的內容通常包括主標題和副標題(h1和h2 headings)，以及許多的段落(paragraph)，在本軟體的操作介面中，一個段落包括了一段文字敘述與一批照片(0～多張，不限數量)，通常是同一時間地點拍攝的一批照片，但不以此為限，在生成的篇章頁面中，每一個段落會先呈現文字敘述，再以縮圖排列出該段落的照片，在段落之間還可以插入副標題。</p>
+
+            <h2><a name="EditChapter">進入篇章的編輯畫面</a></h2>
+
+            <p>在相簿資訊的畫面中，如下圖所示，先(1)從目錄點選要進入編輯的篇章，再點擊(2)工具列上的<img class="inline_img" src="edit.png" /><b>編輯篇章</b>按鈕，或是直接在目錄上以滑鼠雙擊(double click)要編輯的篇章，都可以進入到該篇章的編輯畫面。</p>
+
+            <p class="figure">
+                <img src="mainpage_edit_zh.png" style="width: 720px" />
+            </p>
+
+            <p>本軟體在建立新篇章的時候，都會在該篇章中預先建立一個新的空白段落(paragraph)，讓使用者可以立刻加入內容。</p>
+
+            <h2><a name="AddPhotos">編輯段落並加入照片</a></h2>
+
+            <p>編輯篇章內容的畫面如下圖所示，左邊是段落的清單，每一個段落都是一個相片集，並且在清單中顯示每一個段落的第一張照片，右邊的區域是段落的內容，包含了此相片集的拍攝時間地點、介紹文字、以及照片本身。</p>
+
+            <p class="figure">
+                <img src="chapterpage_zh.png" />
+            </p>
+
+            <p>要在某個段落加入內容，首先(1)在左邊的清單中點選該段落，(2)可以選擇性地輸入一個副標題，此圖中的例子並沒有輸入，(3)勾選標示與否、並輸入拍攝日期，如果沒有勾選，產生的段落畫面將不會顯示日期，(4)勾選標示與否、並輸入拍攝地點，如果沒有勾選，產生的段落畫面將不會顯示地點，(5)撰寫一段介紹文字，(6)點擊工具列上的<img class="inline_img" src="import.png" /><b>加入照片</b>按鈕，開啟檔案對話方塊來加入照片，或是直接從檔案總管拖曳照片檔案到圖中的相片集區域，可以一次選取或拖曳多個照片檔案，然後本軟體會自動地為它們產生縮圖，使用者可以隨時以工具列上的<img class="inline_img" src="preview.png" /><b>預覽相簿</b>按鈕，查看產生的段落排版效果。如果想要刪除某張照片，在相片集中點選它，再點擊工具列上的<img class="inline_img" src="trash.png" /><b>刪除照片</b>按鈕。</p>
+
+            <p class="figure">
+                <img src="chapterpage_1pic_zh.png" style="width: 720px" /><br />
+                <img src="chapterpage_2pics_zh.png" style="width: 720px" /><br />
+                <img src="chapterpage_3pics_zh.png" style="width: 720px" />
+            </p>
+
+            <p>如上圖的預覽畫面所示，本軟體會自動地根據段落中的照片數量來決定照片縮圖的大小，此外，雖然照片有各種尺寸，本軟體為了排版方便，橫向的照片會固定地產生長寬比為2:1比例的縮圖，直向的照片固定地產生1:2比例的縮圖，但原始照片檔案並不受影響，在預覽相簿畫面中點選任何一張縮圖，都可以直接查看該照片的原始圖檔，在將來產生的電子書檔案中也是如此。</p>
+
+            <h2><a name="AddParagraph">新增或刪除其他段落</a></h2>
+
+            <p>要在篇章中增加一個新段落，如下圖所示，只要(1)點擊工具列上的<img class="inline_img" src="add.png" /><b>新增段落</b>按鈕，就會在右邊的清單中產生一個新的空白段落，接下來(2)點選這個新段落，就可以在右邊的區域填寫新段落的內容並且加入相片。如果想要刪除某個段落，在清單中點選該段落之後，點擊工具列上的<img class="inline_img" src="delete.png" /><b>刪除段落</b>按鈕即可。</p>
+
+            <p class="figure">
+                <img src="chapterpage_2p_zh.png" />
+            </p>
+
+            <p>上一個例子中我們沒有在第一個段落填入段落標題，在這個例子裡(3)我們填寫了標題，於是<img class="inline_img" src="preview.png" /><b>預覽相簿</b>的時候，我們可以看到成果如下圖。</p>
+
+            <p class="figure">
+                <img src="chapterpage_preview_zh.png" />
+            </p>
+
+            <h2><a name="Reorder">調整照片或段落的順序</a></h2>
+
+            <p>在這個畫面裡，使用者可以直接以滑鼠拖曳的方式調整照片或段落的順序，可以進行的拖曳有(1)在段落清單中拖曳段落，以改變段落的先後順序，(2)在相片集中拖曳相片，以改變相片的排列順序，(3)將相片集中的某張相片拖曳到段落清單中的某個段落，將照片移動到另外一個段落。在拖曳之後，可以藉由<img class="inline_img" src="preview.png" /><b>預覽相簿</b>按鈕立刻查看排版效果。</p>
+
+            <p class="figure">
+                <img src="chapterpage_drag_zh.png" />
+            </p>
+
+            <p style="text-align:center"><a class="next_button" href="edit_photo_zh.htm">下一頁: 調整照片</a></p>
+        </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

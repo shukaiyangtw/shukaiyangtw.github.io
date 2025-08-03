@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="zh-tw" />
+    <title>Album EPUB Studio - shukaiyangtw.github.io</title>
+    <link rel="stylesheet" href="../style.css" type="text/css" />
+    <link rel="stylesheet" href="../style_toc.css" type="text/css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+    <link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <script type="text/javascript">
+
+        function onTocClicked()
+        {
+            let toc = document.getElementById("toc_div");
+            if (toc.style.display == "block") {  toc.style.display = "none";  }
+            else {  toc.style.display = "block";  }
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+<div id="page_container">
+    <div id="action_bar_row">
+        <div id="action_bar">
+
+            <div class="action_bar_button">
+                <a href="index_zh.htm"><img src="../images/back.png" /></a>
+                <a class="action_bar_textlink" href="index_zh.htm">介紹</a>
+            </div>
+
+            <div id="toc_button" class="action_bar_button">
+                <a href="javascript: onTocClicked();"><img src="../images/toc.png" /></a>
+                <a class="action_bar_textlink" href="javascript: onTocClicked();">目錄</a>
+            </div>
+
+            <div class="action_bar_title">
+                Album EPUB Studio 使用者手冊
+            </div>
+
+            <div class="action_bar_button">
+                <a href="index_en.htm"><img src="../images/lang.png" /></a>
+                <a class="action_bar_textlink" href="export_epub_en.htm">English</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="context_row">
+        <div class="context_wrapper" style="position: relative">
+
+        <div id="toc_div">
+            <ul>
+                <li><a id="toc_overview" href="manual_zh.htm">概觀</a>
+                    <ul class="subtitles">
+                        <li><a href="manual_zh.htm#WhatsEPUB">什麼是EPUB檔案</a>.</li>
+                        <li><a href="manual_zh.htm#WhatsAlbumEPUB">什麼是相簿EPUB檔案</a>.</li>
+                    </ul>
+                </li>
+
+                <li><a id="toc_new_album" href="new_album_zh.htm">建立新相簿</a>
+                    <ul class="subtitles">
+                        <li><a href="new_album_zh.htm#NewAlbumPrj">新建相簿專案</a>.</li>
+                        <li><a href="new_album_zh.htm#FillAlbumInfo">填寫相簿資訊</a>.</li>
+                        <li><a href="new_album_zh.htm#RenameChapter">更改新篇章的標題</a>.</li>
+                        <li><a href="new_album_zh.htm#AddChapter">新增或刪除其他篇章</a>.</li>
+                    </ul>
+                </li>
+
+                <li><a id="toc_edit_chapter" href="edit_chapter_zh.htm">編輯篇章內容</a>
+                    <ul class="subtitles">
+                        <li><a href="edit_chapter_zh.htm#EditChapter">進入篇章的編輯畫面</a>.</li>
+                        <li><a href="edit_chapter_zh.htm#AddPhotos">編輯段落並加入照片</a>.</li>
+                        <li><a href="edit_chapter_zh.htm#AddParagraph">新增或刪除其他段落</a>.</li>
+                        <li><a href="edit_chapter_zh.htm#Reorder">調整照片或段落的順序</a>.</li>
+                    </ul>
+                </li>
+
+                <li><a id="toc_edit_photo" href="edit_photo_zh.htm">調整照片</a></li>
+                <li><a id="toc_create_cover" href="create_cover_zh.htm">製作相簿封面</a></li>
+
+                <li><a id="toc_export_epub" class="toc_current" href="export_epub_zh.htm">匯出與匯入</a>
+                    <ul class="subtitles">
+                        <li><a href="export_epub_zh.htm#Export">匯出 EPUB 或網頁檔案</a>.</li>
+                        <li><a href="export_epub_zh.htm#Import">匯入相簿 EPUB 檔案</a>.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="content_div">
+            <h1>匯出與匯入</h1>
+
+            <p>使用者隨時可以把相簿專案匯出為EPUB檔案，不管是作為成品，或是做為製作中途的備份，有些相簿的製作是耗費時日的，例如生活點滴或是實驗觀察記錄，隨時備份是良好的習慣，將製作中的相簿專案匯出為檔案並不會刪除專案本身。已經匯出且從本軟體中刪除的相簿檔案，如果想要修改，也可以將EPUB 檔案匯入為相簿專案，並且繼續編輯。</p>
+
+            <h2><a name="Export">匯出 EPUB 或網頁檔案</a></h2>
+
+            <p>要將製作中或製作完成的相簿匯出為檔案，首先(1)在專案清單中點選它，接著(2)點擊工具列上的<img class="inline_img" src="save_as.png" /><b>匯出相簿為檔案</b>按鈕，會出現如下圖所示的檔案對話框，供使用者選擇要匯出的位置和檔名，(3)選擇<b>存檔類型</b>，然後按下<b>存檔</b>按鈕；選擇「Epub album files (*.epub)」會把相簿匯出為一個 .album.epub檔案，該檔案可以被各種EPUB軟硬體裝置閱讀，選擇「Zipped HTML files (*.zip)」會將預覽相簿時見到的所有網頁檔案壓縮為一個.zip，使用者可以將它解壓到網站空間上。</p>
+
+            <p class="figure">
+                <img src="albumlist_export_zh.png" />
+            </p>
+
+            <p>以免費軟體Calibre為例，開啟本例製作的相簿EPUB檔案後如下圖所示；在EPUB軟硬體閱讀本軟體製作的電子書時，書頁的排版會由閱讀器再根據裝置或軟體視窗的尺寸重新排版，這是EPUB電子書的特性。以Calibre為例，如圖所示，書上的照片縮圖是可以點擊的，(1)點擊照片之後，會出現該照片是有連結其他註解內容的，接下來點擊(2)的箭號，可以全畫面觀賞連結的完整照片，(3)在照片上點擊滑鼠右鍵，會出現彈出選單，選擇<b>檢視圖片</b>可以檢視並取回該照片的原始圖檔。</p>
+
+            <p class="figure">
+                <img src="calibre_zh.png" />
+            </p>
+
+            <p>如果是選擇將相簿專案匯出為網頁檔案，當 .zip 檔案解壓縮之後，將所有檔案放置到網站上，或是在本機以網頁瀏覽器開啟index.html首頁檔案，就可以看到如同預覽相簿時看到的畫面，同樣地，每一格照片縮圖都是可以點擊以查看完整照片的。</p>
+
+            <p class="figure">
+                <img src="chrome_zh.png" />
+            </p>
+
+            <h2><a name="Import">匯入相簿 EPUB 檔案</a></h2>
+
+            <p>如果要繼續編輯既有的相簿EPUB檔案，只要點擊工具列上的<img class="inline_img" src="import.png" /><b>匯入.album.pub檔案</b>按鈕，或是將該檔案由檔案總管拖放到本軟體的專案清單處，它就會重新出現在清單中。</p>
+
+            <p class="figure">
+                <img src="albumlist_import_zh.png" />
+            </p>
+
+            <p>如果相簿已經製作完成並且匯出EPUB檔案，可點擊工具列上的<img class="inline_img" src="trash.png" /><b>刪除相簿</b>按鈕，將專案由本軟體中刪除，以節省磁碟空間。</p>
+        </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="en-us" />
+    <title>Album EPUB Studio - shukaiyangtw.github.io</title>
+    <link rel="stylesheet" href="../style.css" type="text/css" />
+    <link rel="stylesheet" href="../style_toc.css" type="text/css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+    <link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <script type="text/javascript">
+
+        function onTocClicked()
+        {
+            let toc = document.getElementById("toc_div");
+            if (toc.style.display == "block") {  toc.style.display = "none";  }
+            else {  toc.style.display = "block";  }
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+<div id="page_container">
+    <div id="action_bar_row">
+        <div id="action_bar">
+
+            <div class="action_bar_button">
+                <a href="index_en.htm"><img src="../images/back.png" /></a>
+                <a class="action_bar_textlink" href="index_en.htm">Introduction</a>
+            </div>
+
+            <div id="toc_button" class="action_bar_button">
+                <a href="javascript: onTocClicked();"><img src="../images/toc.png" /></a>
+                <a class="action_bar_textlink" href="javascript: onTocClicked();">Topics</a>
+            </div>
+
+            <div class="action_bar_title">
+                Album EPUB Studio User Manual
+            </div>
+
+            <div class="action_bar_button">
+                <a href="index_zh.htm"><img src="../images/lang.png" /></a>
+                <a class="action_bar_textlink" href="export_epub_zh.htm">中文</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="context_row">
+        <div class="context_wrapper" style="position: relative">
+
+        <div id="toc_div">
+            <ul>
+                <li><a id="toc_overview" href="manual_en.htm">Overview</a>
+                    <ul class="subtitles">
+                        <li><a href="manual_en.htm#WhatsEPUB">What's an EPUB File</a>?</li>
+                        <li><a href="manual_en.htm#WhatsAlbumEPUB">What's an Album EPUB File</a>?</li>
+                    </ul>
+                </li>
+
+                <li><a id="toc_new_album" href="new_album_en.htm">Create a New Album</a>
+                    <ul class="subtitles">
+                        <li><a href="new_album_en.htm#NewAlbumPrj">New an Album Project</a>.</li>
+                        <li><a href="new_album_en.htm#FillAlbumInfo">Fill the Album Info</a>.</li>
+                        <li><a href="new_album_en.htm#RenameChapter">Edit the Title of a New Chapter</a>.</li>
+                        <li><a href="new_album_en.htm#AddChapter">Add or Delete Chapters</a>.</li>
+                    </ul>
+                </li>
+
+                <li><a id="toc_edit_chapter" href="edit_chapter_en.htm">Edit the Chapter</a>
+                    <ul class="subtitles">
+                        <li><a href="edit_chapter_en.htm#EditChapter">Enter the Chapter Editing</a>.</li>
+                        <li><a href="edit_chapter_en.htm#AddPhotos">Edit the Text and Add Photos</a>.</li>
+                        <li><a href="edit_chapter_en.htm#AddParagraph">Add or Delete Paragraphs</a>.</li>
+                        <li><a href="edit_chapter_en.htm#Reorder">Reorder Photos and Paragraphs</a>.</li>
+                    </ul>
+                </li>
+
+                <li><a id="toc_edit_photo" href="edit_photo_en.htm">Modify a Photo</a></li>
+                <li><a id="toc_create_cover" href="create_cover_en.htm">Create the Album Cover</a></li>
+
+                <li><a id="toc_export_epub" class="toc_current" href="export_epub_en.htm">Exportation and Importation</a>
+                    <ul class="subtitles">
+                        <li><a href="export_epub_en.htm#Export">Export to an EPUB File or Website</a>.</li>
+                        <li><a href="export_epub_en.htm#Import">Import an Album EPUB File</a>.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="content_div">
+            <h1>Exportation and Importation</h1>
+
+            <p>The user can export an album project to an EPUB file anytime, no matter it is finished or not. Creation of some albums spends months, such as diaries or experiment records. As a result or as a backup, it is worthy of appreciation to backup albums at all times. If you want to continue editing some finished albums, just import them.</p>
+
+            <h2><a name="Export">Export to an EPUB File or Website</a></h2>
+
+            <p>To export an album project, first (1) pick the project in the list, then (2) click the toolbar button <img class="inline_img" src="save_as.png" /><b>Export to a File</b>. The file dialog box shows to select the file name and path. (3) Select the file type for exportation, option <b>Epub album files (*.epub)</b> exports the project to an .album.epub file, and option <b>Zipped HTML files (*.zip)</b> exports the project to an archive of web pages you have seen in the preview window.</p>
+
+            <p class="figure">
+                <img src="albumlist_export_en.png" />
+            </p>
+
+            <p>Take the freeware <a target="_blank" href="https://calibre-ebook.com/">Calibre</a> for example, the exported .album.epub file is read like this. When an EPUB file is loaded in a reader, the typesetting is automatically changed according the dimension of the reader, and the thumbnails of photos are clickable. Take Calibre for example, once you (1) click on a thumbnail, it shows an annotation about the photo. (2) There is an arrow for expansion. Click the arrow, then you get the full-screen photo image. You can also (3) right-click on the photo, and you get the menu item <b>View image</b> to get the original photo file.</b>
+
+            <p class="figure">
+                <img src="calibre_en.png" />
+            </p>
+
+            <p>If you choose to export an album project to a zip of web pages. When you unzip the exported file, put the extracted files on a web site or open index.html on the local machine. You can see the same pages with the preview. Each thumbnail is clickable.</p>
+
+            <p class="figure">
+                <img src="chrome_en.png" />
+            </p>
+
+            <h2><a name="Import">Import an Album EPUB File</a></h2>
+
+            <p>To continue editing a finished album, (1) click the toolbar button <img class="inline_img" src="import.png" /><b>Import an .album.epub File</b>, then pick a file by the file dialog box. Or just (1) drag the file into the list of album projects. It shows in the list and become editable again.</p>
+
+            <p class="figure">
+                <img src="albumlist_import_en.png" />
+            </p>
+
+            <p>If the album is finished and exported to an EPUB file, click the toolbar button <img class="inline_img" src="trash.png" /><b>Delete the Album</b> to release the disk-space occupied by the project.</p>
+        </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
