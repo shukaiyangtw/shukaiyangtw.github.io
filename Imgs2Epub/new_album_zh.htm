@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="zh-tw" />
+    <title>Album EPUB Studio - shukaiyangtw.github.io</title>
+    <link rel="stylesheet" href="../style.css" type="text/css" />
+    <link rel="stylesheet" href="../style_toc.css" type="text/css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+    <link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <script type="text/javascript">
+
+        function onTocClicked()
+        {
+            let toc = document.getElementById("toc_div");
+            if (toc.style.display == "block") {  toc.style.display = "none";  }
+            else {  toc.style.display = "block";  }
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+<div id="page_container">
+    <div id="action_bar_row">
+        <div id="action_bar">
+
+            <div class="action_bar_button">
+                <a href="index_zh.htm"><img src="../images/back.png" /></a>
+                <a class="action_bar_textlink" href="index_zh.htm">介紹</a>
+            </div>
+
+            <div id="toc_button" class="action_bar_button">
+                <a href="javascript: onTocClicked();"><img src="../images/toc.png" /></a>
+                <a class="action_bar_textlink" href="javascript: onTocClicked();">目錄</a>
+            </div>
+
+            <div class="action_bar_title">
+                Album EPUB Studio 使用者手冊
+            </div>
+
+            <div class="action_bar_button">
+                <a href="index_en.htm"><img src="../images/lang.png" /></a>
+                <a class="action_bar_textlink" href="new_album_en.htm">English</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="context_row">
+        <div class="context_wrapper" style="position: relative">
+
+        <div id="toc_div">
+            <ul>
+                <li><a id="toc_overview" href="manual_zh.htm">概觀</a>
+                    <ul class="subtitles">
+                        <li><a href="manual_zh.htm#WhatsEPUB">什麼是EPUB檔案</a>.</li>
+                        <li><a href="manual_zh.htm#WhatsAlbumEPUB">什麼是相簿EPUB檔案</a>.</li>
+                    </ul>
+                </li>
+
+                <li><a id="toc_new_album" class="toc_current" href="new_album_zh.htm">建立新相簿</a>
+                    <ul class="subtitles">
+                        <li><a href="new_album_zh.htm#NewAlbumPrj">新建相簿專案</a>.</li>
+                        <li><a href="new_album_zh.htm#FillAlbumInfo">填寫相簿資訊</a>.</li>
+                        <li><a href="new_album_zh.htm#RenameChapter">更改新篇章的標題</a>.</li>
+                        <li><a href="new_album_zh.htm#AddChapter">新增或刪除其他篇章</a>.</li>
+                    </ul>
+                </li>
+
+                <li><a id="toc_edit_chapter" href="edit_chapter_zh.htm">編輯篇章內容</a>
+                    <ul class="subtitles">
+                        <li><a href="edit_chapter_zh.htm#EditChapter">進入篇章的編輯畫面</a>.</li>
+                        <li><a href="edit_chapter_zh.htm#AddPhotos">編輯段落並加入照片</a>.</li>
+                        <li><a href="edit_chapter_zh.htm#AddParagraph">新增或刪除其他段落</a>.</li>
+                        <li><a href="edit_chapter_zh.htm#Reorder">調整照片或段落的順序</a>.</li>
+                    </ul>
+                </li>
+
+                <li><a id="toc_edit_photo" href="edit_photo_zh.htm">調整照片</a></li>
+                <li><a id="toc_create_cover" href="create_cover_zh.htm">製作相簿封面</a></li>
+
+                <li><a id="toc_export_epub" href="export_epub_zh.htm">匯出與匯入</a>
+                    <ul class="subtitles">
+                        <li><a href="export_epub_zh.htm#Export">匯出 EPUB 或網頁檔案</a>.</li>
+                        <li><a href="export_epub_zh.htm#Import">匯入相簿 EPUB 檔案</a>.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="content_div">
+            <h1>建立新相簿</h1>
+
+            <p>由於整理照片往往不是短時間的工作，不只是幾天之內，甚至是一段時日的收集累積，很難在幾個小時內編纂一個電子書檔案就能完事。所以本軟體採用長期專案(project)的概念去管理製作中的相簿，如下圖所示，在本軟體當中建立了相簿專案之後，它就會一直存在於專案清單當中，使用者隨時點選進入、編輯或增添照片或文字，本軟體會自動地將編修內容儲存起來，並且使用者隨時透過<img class="inline_img" src="preview.png" /><b>預覽相簿</b>的功能，查看編修後的效果，所以本軟體不存在如<b>儲存檔案</b>之類的按鈕，使用者可以在編修當中或完成的時候，隨時用<img class="inline_img" src="save_as.png" /><b>匯出相簿為檔案</b>的功能，將目前的成果輸出為 EPUB 檔案或網頁檔案，但此清單中的相簿專案仍然不會消失，除非你選擇<img class="inline_img" src="trash.png" /><b>刪除相簿</b>，已經輸出並刪除的 EPUB 相簿檔案，日後如果改變心意想要修改或續作的時候，也可以將它再匯入為相簿專案。</p>
+
+            <h2><a name="NewAlbumPrj">新建相簿專案</a></h2>
+
+            <p>如下圖所示，要建立一個新的相簿，首先(1)點擊上方工具列的<img class="inline_img" src="add.png" /><b>新建相簿專案</b>按鈕即可，於是在其下的相簿專案清單中，會出現一個 <b>(未命名的新相簿)</b> 項目，表示空白的新相簿已經建立。</p>
+
+            <p class="figure">
+                <img src="albumlist_zh.png" />
+            </p>
+
+            <p>接下來讓我們進入新的相簿專案，(2)在清單中點選 <b>(未命名的新相簿)</b> 的封面圖片，然後點擊工具列上的(3)<img class="inline_img" src="edit.png" /><b>編輯相簿專案</b>，或是直接在(2)封面相片上雙擊滑鼠左鍵，都可以進入下圖的相簿資訊畫面，並可進行編輯。</p>
+
+            <h2><a name="FillAlbumInfo">填寫相簿資訊</a></h2>
+
+            <p>在上圖的專案清單中雙擊(double click)相簿專案，會進入到如下圖的相簿資訊畫面，左上角的空白區域是相簿封面圖片，但是新相簿還沒有製作封面，所以是空白的。左下角請選擇性地填入此相簿的基本資訊，包括(1)相簿的標題、(2)相簿的製作者、(3)此相簿主要的拍攝地點、(4)相簿的拍攝起迄日期，使用者可以直接鍵入日期或使用日期旁的月曆圖示來選取日期，基本上只要指定起始日期即可，右邊的迄止日期會隨著照片的加入而自動地更新，在右下角的相簿簡介欄位(5)，使用者可以填寫一段文字，簡介相簿的內容或是相關的故事。</p>
+
+            <p class="figure">
+                <img src="mainpage_zh.png" />
+            </p>
+
+            <p>在以上畫面裡，你可以發現沒有任何的儲存按鈕，因為使用在此填寫的任何資訊，都會被自動地儲存起來，除此之外，上方工具列的最右邊有一個<img class="inline_img" src="preview.png" /><b>預覽相簿</b>的按鈕，使用者隨時可以點擊它、以網頁的形式預覽目前的相簿電子書排版效果。如前面提到的、EPUB電子書本質上就是網頁，以目前初步填寫的資訊所產生的電子書會下圖預覽所示，使用者填寫的相簿資訊和簡介內容構成了電子書的第一頁前言內容。</p>
+
+            <p class="figure">
+                <img src="mainpage_preview_zh.png" />
+            </p>
+
+            <p>在新相簿專案建立的時候已經建立了一個新的空白篇章(chapter)，標題就叫做「新的篇章」，它同時也出現在預覽畫面的目錄裡，這個預設的標題通常不是使用者想要的，所以要修改它。</p>
+
+            <h2><a name="RenameChapter">更改新篇章的標題</a></h2>
+
+            <p>在右上角的目錄當中，首先(1)點選要更改標題的篇章，(2)點擊<img class="inline_img" src="rename.png" /><b>更改篇章標題</b>按鈕，於是出現了如下的對話方塊，使用者可以(3)輸入新的篇章標題。除了篇章標題以外，使用者可以也選擇性地更改(4)子目錄的名稱，然後按下(5)確定按鈕即可。</p>
+
+            <p class="figure">
+                <img src="mainpage_ren_zh.png" style="width: 720px" />
+            </p>
+
+            <p>前面提到本軟體會把屬於某篇章的所有照片檔案都放在同一個子目錄(資料夾)當中，(4)這個子目錄名稱對於產生的EPUB電子書較沒有影響，使用者可以忽略之，但是如果使用者想把相簿輸出為網頁，那麼這個子目錄名稱就會影響到該篇章的照片檔案網址。</p>
+
+            <h2><a name="AddChapter">新增或刪除其他篇章</a></h2>
+
+            <p>雖然可以把所有的內容都塞在一個篇章當中，但是當照片量多的時候，適當地劃分為多個篇章，會有助於改善電子書的載入速度。要建立另一個篇章只要(1)點擊工具列上的<img class="inline_img" src="add.png" /><b>新增篇章</b>按鈕即可，如下圖所示，目錄上會立刻出現一個「新的篇章」(子目錄名稱自動設定為ch002)，接下來使用者可以同樣的方法修改它的標題。</p>
+
+            <p class="figure">
+                <img src="mainpage_add_zh.png" style="width: 720px" />
+            </p>
+
+            <p>當目錄中有兩個以上的篇章的時候，使用者可以直接(2)在目錄上以滑鼠拖曳篇章標題，就可以改變篇章的順序。如果想要刪除其中一個篇章，只要在目錄上點選它，然後點擊工具列上的<img class="inline_img" src="delete.png" /><b>刪除篇章</b>按鈕即可。接下來讓我們進入其中一個篇章，並編輯其內容。</p>
+
+            <p style="text-align:center"><a class="next_button" href="edit_chapter_zh.htm">下一頁: 編輯篇章內容</a></p>
+        </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

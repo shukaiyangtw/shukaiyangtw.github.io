@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="zh-tw" />
+    <title>Album EPUB Studio - shukaiyangtw.github.io</title>
+    <link rel="stylesheet" href="../style.css" type="text/css" />
+    <link rel="stylesheet" href="../style_toc.css" type="text/css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+    <link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <script type="text/javascript">
+
+        function onTocClicked()
+        {
+            let toc = document.getElementById("toc_div");
+            if (toc.style.display == "block") {  toc.style.display = "none";  }
+            else {  toc.style.display = "block";  }
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+<div id="page_container">
+    <div id="action_bar_row">
+        <div id="action_bar">
+
+            <div class="action_bar_button">
+                <a href="index_zh.htm"><img src="../images/back.png" /></a>
+                <a class="action_bar_textlink" href="index_zh.htm">介紹</a>
+            </div>
+
+            <div id="toc_button" class="action_bar_button">
+                <a href="javascript: onTocClicked();"><img src="../images/toc.png" /></a>
+                <a class="action_bar_textlink" href="javascript: onTocClicked();">目錄</a>
+            </div>
+
+            <div class="action_bar_title">
+                Album EPUB Studio 使用者手冊
+            </div>
+
+            <div class="action_bar_button">
+                <a href="index_en.htm"><img src="../images/lang.png" /></a>
+                <a class="action_bar_textlink" href="manual_en.htm">English</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="context_row">
+        <div class="context_wrapper" style="position: relative">
+
+        <div id="toc_div">
+            <ul>
+                <li><a id="toc_overview" class="toc_current" href="manual_zh.htm">概觀</a>
+                    <ul class="subtitles">
+                        <li><a href="manual_zh.htm#WhatsEPUB">什麼是EPUB檔案</a>.</li>
+                        <li><a href="manual_zh.htm#WhatsAlbumEPUB">什麼是相簿EPUB檔案</a>.</li>
+                    </ul>
+                </li>
+
+                <li><a id="toc_new_album" href="new_album_zh.htm">建立新相簿</a>
+                    <ul class="subtitles">
+                        <li><a href="new_album_zh.htm#NewAlbumPrj">新建相簿專案</a>.</li>
+                        <li><a href="new_album_zh.htm#FillAlbumInfo">填寫相簿資訊</a>.</li>
+                        <li><a href="new_album_zh.htm#RenameChapter">更改新篇章的標題</a>.</li>
+                        <li><a href="new_album_zh.htm#AddChapter">新增或刪除其他篇章</a>.</li>
+                    </ul>
+                </li>
+
+                <li><a id="toc_edit_chapter" href="edit_chapter_zh.htm">編輯篇章內容</a>
+                    <ul class="subtitles">
+                        <li><a href="edit_chapter_zh.htm#EditChapter">進入篇章的編輯畫面</a>.</li>
+                        <li><a href="edit_chapter_zh.htm#AddPhotos">編輯段落並加入照片</a>.</li>
+                        <li><a href="edit_chapter_zh.htm#AddParagraph">新增或刪除其他段落</a>.</li>
+                        <li><a href="edit_chapter_zh.htm#Reorder">調整照片或段落的順序</a>.</li>
+                    </ul>
+                </li>
+
+                <li><a id="toc_edit_photo" href="edit_photo_zh.htm">調整照片</a></li>
+                <li><a id="toc_create_cover" href="create_cover_zh.htm">製作相簿封面</a></li>
+
+                <li><a id="toc_export_epub" href="export_epub_zh.htm">匯出與匯入</a>
+                    <ul class="subtitles">
+                        <li><a href="export_epub_zh.htm#Export">匯出 EPUB 或網頁檔案</a>.</li>
+                        <li><a href="export_epub_zh.htm#Import">匯入相簿 EPUB 檔案</a>.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="content_div">
+            <h1>概觀</h1>
+
+            <p>本軟體的功能在於將你的照片檔案們及其相關的文字紀錄，以最簡單便利的方式歸檔為一個EPUB電子書檔案。用來將回憶歸檔的格式應當要符合兩個訴求，其一是確保檔案在數十年後，還能夠被未來的軟硬體正常地開啟，其二是盡可能地保留照片資料的最高解析度和相關資訊。要滿足第一個訴求，相簿成品一定要是開放的國際標準格式，才能夠跨平台跨時空地被開啟，而要滿足第二個訴求，就不能使用壓縮時會破壞圖片的檔案格式，所以選用了EPUB檔案格式。</p>
+
+            <h2><a name="WhatsEPUB">什麼是EPUB檔案</a></h2>
+
+            <p>EPUB是一種電子圖書標準，是由國際數位出版論壇(IDPF)提出的自由開放格式，它是一種會在各種尺寸的閱讀載具上會自動重新排版的內容。如下圖所示，EPUB檔案本質上是許多XHTML網頁的zip壓縮檔，其中container.xml是zip容器中的第一個檔案，由它再指出content.opf和toc.ncx的位置，前者紀載了電子書資訊以及包含的檔案清單、包括各篇章的XHTML檔案及相關的css與影像檔案，後者則提供了電子書的篇章目錄，指定了各篇章檔案的閱讀順序。</p>
+
+            <p class="figure">
+                <img src="epub_zh.jpg" style="width: 500px" />
+            </p>
+
+            <p>由於網頁本來就容易設計成能適用各種螢幕尺寸的形式，而且網頁瀏覽器幾乎在各種系統的載具上都有提供，故以XHTML為基礎的EPUB檔案也很容易實現跨平台自動排版的理想，此外，zip是一種無損的文件壓縮格式，所以也不必擔心電子書中的圖片會損失畫質，以結論來說EPUB是一種製作相簿的理想檔案格式。</p>
+
+            <h2><a name="WhatsAlbumEPUB">什麼是相簿EPUB檔案</a></h2>
+
+            <p>在EPUB檔案格式的基礎之上，本軟體的相簿EPUB檔案再加入一些相簿編輯相關的資訊檔案，讓它能夠被所有的EPUB閱讀器讀取的同時，還能夠持續地被本軟體編輯。如下圖的紅色部分所示，除了content.opf之外，相簿EPUB另外以album.xml紀錄了相簿的拍攝日期範圍、地點、介紹文字等等的資訊，相簿EPUB以子目錄儲存每個篇章的原始照片檔案及其單獨閱覽網頁，此外另以chapter.xml紀錄了每張照片的拍攝日期、地點、標籤文字等等。</p>
+
+            <p class="figure">
+                <img src="epub_zlbum_zh.jpg" style="width: 750px" />
+            </p>
+
+            <p>使用者不必實際去編輯這些檔案，本軟體提供了操作介面，以類似在社群網站發文打卡的方式來建立EPUB相簿，使用者只要在本軟體裡建立了新相簿、建立了新的空白篇章，接下來只要填寫一段文字，選擇拍攝日期和地點，拖曳一些相片檔案進入本軟體，就可以在篇章裡建立一個新段落；持續不斷地建立新段落、建立新篇章，就可以完成整本相簿電子書。</p>
+
+            <p style="text-align:center"><a class="next_button" href="new_album_zh.htm">下一頁: 新建相簿</a></p>
+        </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

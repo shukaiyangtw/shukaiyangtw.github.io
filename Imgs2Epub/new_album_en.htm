@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="en-us" />
+    <title>Album EPUB Studio - shukaiyangtw.github.io</title>
+    <link rel="stylesheet" href="../style.css" type="text/css" />
+    <link rel="stylesheet" href="../style_toc.css" type="text/css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+    <link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <script type="text/javascript">
+
+        function onTocClicked()
+        {
+            let toc = document.getElementById("toc_div");
+            if (toc.style.display == "block") {  toc.style.display = "none";  }
+            else {  toc.style.display = "block";  }
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+<div id="page_container">
+    <div id="action_bar_row">
+        <div id="action_bar">
+
+            <div class="action_bar_button">
+                <a href="index_en.htm"><img src="../images/back.png" /></a>
+                <a class="action_bar_textlink" href="index_en.htm">Introduction</a>
+            </div>
+
+            <div id="toc_button" class="action_bar_button">
+                <a href="javascript: onTocClicked();"><img src="../images/toc.png" /></a>
+                <a class="action_bar_textlink" href="javascript: onTocClicked();">Topics</a>
+            </div>
+
+            <div class="action_bar_title">
+                Album EPUB Studio User Manual
+            </div>
+
+            <div class="action_bar_button">
+                <a href="index_zh.htm"><img src="../images/lang.png" /></a>
+                <a class="action_bar_textlink" href="new_album_zh.htm">中文</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="context_row">
+        <div class="context_wrapper" style="position: relative">
+
+        <div id="toc_div">
+            <ul>
+                <li><a id="toc_overview" href="manual_en.htm">Overview</a>
+                    <ul class="subtitles">
+                        <li><a href="manual_en.htm#WhatsEPUB">What's an EPUB File</a>?</li>
+                        <li><a href="manual_en.htm#WhatsAlbumEPUB">What's an Album EPUB File</a>?</li>
+                    </ul>
+                </li>
+
+                <li><a id="toc_new_album" class="toc_current" href="new_album_en.htm">Create a New Album</a>
+                    <ul class="subtitles">
+                        <li><a href="new_album_en.htm#NewAlbumPrj">New an Album Project</a>.</li>
+                        <li><a href="new_album_en.htm#FillAlbumInfo">Fill the Album Info</a>.</li>
+                        <li><a href="new_album_en.htm#RenameChapter">Edit the Title of a New Chapter</a>.</li>
+                        <li><a href="new_album_en.htm#AddChapter">Add or Delete Chapters</a>.</li>
+                    </ul>
+                </li>
+
+                <li><a id="toc_edit_chapter" href="edit_chapter_en.htm">Edit the Chapter</a>
+                    <ul class="subtitles">
+                        <li><a href="edit_chapter_en.htm#EditChapter">Enter the Chapter Editing</a>.</li>
+                        <li><a href="edit_chapter_en.htm#AddPhotos">Edit the Text and Add Photos</a>.</li>
+                        <li><a href="edit_chapter_en.htm#AddParagraph">Add or Delete Paragraphs</a>.</li>
+                        <li><a href="edit_chapter_en.htm#Reorder">Reorder Photos and Paragraphs</a>.</li>
+                    </ul>
+                </li>
+
+                <li><a id="toc_edit_photo" href="edit_photo_en.htm">Modify a Photo</a></li>
+                <li><a id="toc_create_cover" href="create_cover_en.htm">Create the Album Cover</a></li>
+
+                <li><a id="toc_export_epub" href="export_epub_en.htm">Exportation and Importation</a>
+                    <ul class="subtitles">
+                        <li><a href="export_epub_en.htm#Export">Export to an EPUB File or Website</a>.</li>
+                        <li><a href="export_epub_en.htm#Import">Import an Album EPUB File</a>.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="content_div">
+            <h1>Create a New Album</h1>
+
+            <p>
+            Sometimes arranging photos spends days. It is more than editing a file in hours. So the software treat the albums as projects. As shown below, once you create a new album, it is a project in the list, then you can edit it anytime. There is no <b>Save</b> button because all your modifications will be saved automatically, and you can preview the album by the toolbar button <img class="inline_img" src="preview.png" /><b>Preview the Album</b>. When your album is finished, export it to an EPUB file or web pages by the toolbar button <img class="inline_img" src="save_as.png" /><b>Export to a File</b>. The project remains unless you delete it by button <img class="inline_img" src="trash.png" /><b>Delete the Album</b>. The exported EPUB file can be imported again.
+
+            <h2><a name="NewAlbumPrj">New an Album Project</a></h2>
+
+            <p>To build a new album, first (1) click the toolbar button <img class="inline_img" src="add.png" /><b>New Album Project</b>, then an empty project <b>(Untitled Album)</b> is listed. </p>
+
+            <p class="figure">
+                <img src="albumlist_en.png" />
+            </p>
+
+            <p>Let's enter the new album project. (2) Click the cover of album <b>(Untitled Album)</b> then (3) click button <img class="inline_img" src="edit.png" /><b>Edit the Album Project</b>, or just (2) double click on the album cover, it enters the editable album-info window.</p>
+
+            <h2><a name="FillAlbumInfo">Fill the Album Info.</a></h2>
+
+            <p>Double clicking on the album in the figure above, you enter the album-info window shown below. In the left is the blank image of album cover, followed by the optional text fields of the basic information of this album including (1) the title, (2) the name of the album author, (3) main locations of photography, and (4) the first and the last date when the photos are taken. (Only the first date has to be set, the last date will be updated automatically when more photos are added.) In the right (5) is the text field for a brief story or introduction to the album.</p>
+
+            <p class="figure">
+                <img src="mainpage_en.png" />
+            </p>
+
+            <p>In the window, there is no <b>Save</b> button, because anything you edited will be saved in the project automatically. Besides, there is a toolbar button <img class="inline_img" src="preview.png" />
+            <b>Preview the Album</b> for you to preview the results as web pages. An EPUB book basically consists of web pages. As shown below, the information you edited is converted to the preface of the book.</p>
+
+            <p class="figure">
+                <img src="mainpage_preview_en.png" />
+            </p>
+
+            <p>When a new album project is created, an empty chapter titled <b>New Chapter</b> is also created. It is already listed in the table of contents. This default title is usually unwanted, so let's change it.</p>
+
+            <h2><a name="RenameChapter">Edit the Title of a New Chapter</a></h2>
+
+            <p>In the table of contents, first (1) click the chapter to be renamed, (2) click the toolbar button <img class="inline_img" src="rename.png" /><b>Rename the Chapter</b>, then the dialog box shows. (3) Key in the new title of the chapter, you may also (4) rename the sub-directory optionally, then (5) click the <b>OK</b> button.</p>
+
+            <p class="figure">
+                <img src="mainpage_ren_en.png" style="width: 720px" />
+            </p>
+
+            <p>As mentioned, an EPUB is basically a collection of web pages, and this software places all the photos of a chapter in its own sub-directory. Changing the sub-directory names (4) has no effect on the result EPUB file. If you will export the album to web pages, the sub-directory names will affect the URLs of photos.</p>
+
+            <h2><a name="AddChapter">Add or Delete Other Chapters</a></h2>
+
+            <p>Although you can put all photos of the album in a single chapter, it is better to divide a lot of photos into multiple chapters. It helps to accelerate the loading of the result EPUB book or web pages. To create another chapter, simply (1) click the toolbar button <img class="inline_img" src="add.png" /><b>Add a New Chapter</b>. As shown below, the new chapter is listed in the table of contents, then you can also rename it. (the sub-directory name is assigned <b>ch002</b> by default).</p>
+
+            <p class="figure">
+                <img src="mainpage_add_en.png" style="width: 720px" />
+            </p>
+
+            <p>When there are two or more chapters, you can (2) reorder the chapters by dragging. If you want to delete one of them, click it on the table contents, then click toolbar button <img class="inline_img" src="delete.png" /><b>Delete the Chapter</b>.</p>
+
+            <p style="text-align:center"><a class="next_button" href="edit_chapter_en.htm">Next: Edit the Chapter</a></p>
+        </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
