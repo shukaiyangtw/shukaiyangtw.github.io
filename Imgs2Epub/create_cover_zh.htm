@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="zh-tw" />
+    <title>Album EPUB Studio - shukaiyangtw.github.io</title>
+    <link rel="stylesheet" href="../style.css" type="text/css" />
+    <link rel="stylesheet" href="../style_toc.css" type="text/css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+    <link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <script type="text/javascript">
+
+        function onTocClicked()
+        {
+            let toc = document.getElementById("toc_div");
+            if (toc.style.display == "block") {  toc.style.display = "none";  }
+            else {  toc.style.display = "block";  }
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+<div id="page_container">
+    <div id="action_bar_row">
+        <div id="action_bar">
+
+            <div class="action_bar_button">
+                <a href="index_zh.htm"><img src="../images/back.png" /></a>
+                <a class="action_bar_textlink" href="index_zh.htm">介紹</a>
+            </div>
+
+            <div id="toc_button" class="action_bar_button">
+                <a href="javascript: onTocClicked();"><img src="../images/toc.png" /></a>
+                <a class="action_bar_textlink" href="javascript: onTocClicked();">目錄</a>
+            </div>
+
+            <div class="action_bar_title">
+                Album EPUB Studio 使用者手冊
+            </div>
+
+            <div class="action_bar_button">
+                <a href="index_en.htm"><img src="../images/lang.png" /></a>
+                <a class="action_bar_textlink" href="create_cover_en.htm">English</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="context_row">
+        <div class="context_wrapper" style="position: relative">
+
+        <div id="toc_div">
+            <ul>
+                <li><a id="toc_overview" href="manual_zh.htm">概觀</a>
+                    <ul class="subtitles">
+                        <li><a href="manual_zh.htm#WhatsEPUB">什麼是EPUB檔案</a>.</li>
+                        <li><a href="manual_zh.htm#WhatsAlbumEPUB">什麼是相簿EPUB檔案</a>.</li>
+                    </ul>
+                </li>
+
+                <li><a id="toc_new_album" href="new_album_zh.htm">建立新相簿</a>
+                    <ul class="subtitles">
+                        <li><a href="new_album_zh.htm#NewAlbumPrj">新建相簿專案</a>.</li>
+                        <li><a href="new_album_zh.htm#FillAlbumInfo">填寫相簿資訊</a>.</li>
+                        <li><a href="new_album_zh.htm#RenameChapter">更改新篇章的標題</a>.</li>
+                        <li><a href="new_album_zh.htm#AddChapter">新增或刪除其他篇章</a>.</li>
+                    </ul>
+                </li>
+
+                <li><a id="toc_edit_chapter" href="edit_chapter_zh.htm">編輯篇章內容</a>
+                    <ul class="subtitles">
+                        <li><a href="edit_chapter_zh.htm#EditChapter">進入篇章的編輯畫面</a>.</li>
+                        <li><a href="edit_chapter_zh.htm#AddPhotos">編輯段落並加入照片</a>.</li>
+                        <li><a href="edit_chapter_zh.htm#AddParagraph">新增或刪除其他段落</a>.</li>
+                        <li><a href="edit_chapter_zh.htm#Reorder">調整照片或段落的順序</a>.</li>
+                    </ul>
+                </li>
+
+                <li><a id="toc_edit_photo" href="edit_photo_zh.htm">調整照片</a></li>
+                <li><a id="toc_create_cover" class="toc_current" href="create_cover_zh.htm">製作相簿封面</a></li>
+
+                <li><a id="toc_export_epub" href="export_epub_zh.htm">匯出與匯入</a>
+                    <ul class="subtitles">
+                        <li><a href="export_epub_zh.htm#Export">匯出 EPUB 或網頁檔案</a>.</li>
+                        <li><a href="export_epub_zh.htm#Import">匯入相簿 EPUB 檔案</a>.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="content_div">
+            <h1>製作相簿封面</h1>
+
+            <p>本軟體準備了一些範本，使用者只要如前述地指定相簿封面要指定的照片，就可以套用範本生成相簿封面；在相簿資訊畫面點擊工具列上的<img class="inline_img" src="modify.png" /><b>生成相簿封面</b>按鈕，就會見到如下的畫面，前述設為相簿封面的照片已經放在左邊的預覽圖上了，接下來使用者只要(1)選擇背景圖樣，(2)選擇封面文字的<img class="inline_img" src="font.png" /><b>字型與大小</b> (只支援TrueType字型)，(3)選擇<img class="inline_img" src="colors.png" /><b>字體顏色</b>，在預覽圖上確認無誤之後，按下<img class="inline_img" src="accept.png" /><b>生成</b>按鈕即可。</p>
+
+            <p class="figure">
+                <img src="coverpage_zh.png" />
+            </p>
+
+            <p>以此生成的相簿封面如圖所示，封面上面的文字即是使用者之前所填寫的相簿資訊。如果使用者只想要文字不想要照片，可以點擊工具列上的<img class="inline_img" src="delete.png" /><b>移除照片</b>按鈕。返回篇章的編輯畫面以後，可以看到左邊的相簿封面已經換成了生成的圖片。如果不想要使用範本，可以點擊<img class="inline_img" src="upload.png" /><b>自訂封面圖片</b>來選用使用者自己準備好的圖檔，或是根本不想要封面的話，可以點擊工具列上的<img class="inline_img" src="trash.png" /><b>移除封面</b>按鈕，來恢復到尚未製作封面前的狀態。</p>
+
+
+            <p class="figure">
+                <img src="coverpage_demo_zh.png" />
+            </p>
+
+            <p style="text-align:center"><a class="next_button" href="export_epub_zh.htm">下一頁: 匯出與匯入</a></p>
+        </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
