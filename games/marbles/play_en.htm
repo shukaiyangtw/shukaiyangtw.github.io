@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="en-us" />
+    <script type="text/javascript" src="../../scripts/gsmath-1.2-min.js"></script>
+    <script type="text/javascript" src="../../scripts/gsmath-1.2-utils-min.js"></script>
+    <script type="text/javascript" src="game_config.js"></script>
+    <script type="text/javascript" src="stages.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZMVB64F3RX"></script>
+
+    <script type="text/javascript">
+
+        /* String Table: */
+        const STR_GET_READY = "GET READY";
+        const STR_CONGRATULATIONS = "CONGRATULATIONS!";
+        const STR_GAME_OVER = "GAME OVER";
+        const STR_TIME_BONUS = "TIME BONUS";
+        const STR_TOTAL_SCORE = "TOTAL SCORE";
+        const STR_NEXT_STAGE = "NEXT STAGE";
+        const STR_FINISH = "FINISH";
+        const BILLBOARD_URL = "billboard_en.htm";
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-ZMVB64F3RX');
+
+    </script>
+
+    <script type="text/javascript" src="game_objs.js"></script>
+    <script type="text/javascript" src="game_events.js"></script>
+    <script type="text/javascript" src="game_init.js"></script>
+    <script type="text/javascript" src="game_run.js"></script>
+    <script type="text/javascript" src="game_draw.js"></script>
+    <link rel="stylesheet" href="../../game.css" type="text/css" />
+    <title>Emoji Marbles - shukaiyangtw.github.io</title>
+
+    <style>
+        div#startmenu *
+        {   position:absolute;  }
+
+        div#arena *
+        {   position:absolute;  }
+
+        div#arena span.time_score
+        {
+            font-size: 24px;
+            font-weight: bold;
+            color: black;
+        }
+
+        div#message_box
+        {
+            border: 2px solid white;
+            background-color:rgba(64, 64, 64, 0.6);
+            padding: 10px;
+        }
+
+        div#message_box *
+        {   position: static;  }
+    </style>
+
+    <script type="text/javascript">
+
+        window.onload = onPageLoaded;
+        window.onresize = onPageResized;
+
+    </script>
+
+</head>
+
+<body oncontextmenu="return false;">
+
+    <div id="arena" class="arena_vert" tabindex="0" style="display: none">
+
+        <canvas id="buffer1" class="frame_buffer">
+            HTML5 Canvas is unsupported, are you still using IE?
+        </canvas>
+
+        <canvas id="buffer2" class="frame_buffer" style="visibility:hidden">
+            HTML5 Canvas is unsupported, are you still using IE?
+        </canvas>
+
+        <span id="level_label" class="time_score" style="left:20px; top:880px;">LEVEL: 01</span>
+        <span id="time_label" class="time_score" style="left:20px; top:915px;">TIME: 0</span>
+        <span id="score_label" class="time_score" style="left:20px; top:950px;">SCORE: 0</span>
+
+        <!-- ------------------------------ -->
+
+        <div id="message_box" style="left:50px; top:300px; width:480px; height:350px" style="display: none">
+
+            <span id="msg_title" class="game_title">CONGRATULATIONS</span><br />
+            <span id="msg_bonus" class="explanation">TIME BONUS: 0</span><br />
+            <span id="msg_total" class="explanation">TOTAL SCORE: 0</span><br /><br />
+
+            <a id="cont_button" tabindex="-1" href="javascript: onContinueClicked();" class="push_button" style="display:inline-block">下一關</a>
+
+        </div>
+    </div>
+
+    <div id="startmenu" class="arena_vert">
+
+        <img id="banner_img" style="left:0px; top:50px; width:600px; height:200px" src="banner.png" />
+
+        <span id="intro_span" class="explanation" style="left:20px; top:280px; width:560px; height:200px; text-indent:2em">
+            The game of eliminating marbles within a time limit. The player clicks the direction, then the clustered marbles with the same expression are eliminated.
+        </span>
+
+        <span id="level_select_span" class="explanation" style="left:20px; top:520px; width:560px; height:50px; text-align:center">LEVEL 1</span>
+        <input id="stage_select" type="range" min="1" max="10" value="1" onchange="onStageChange(this.value)" style="left:20px; top:580px; width:560px; height:50px" />
+
+        <a id="howto_button" class="push_button" href="howtoplay_en.htm" style="left:40px; top:680px; width:210px; height:70px">Manual</a>
+        <a id="start_button" class="push_button" href="javascript: onStartClicked();" style="left:330px; top:680px; width:210px; height:70px">Start</a>
+        <a id="billboard_button" class="push_button" href="billboard_en.htm" style="left:40px; top:800px; width:210px; height:70px">Billboard</a>
+        <a id="back_button" class="push_button" href="../../games_en.php" style="left:330px; top:800px; width:210px; height:70px">Return</a>
+
+        <a id="music_button" class="icon_button" href="javascript: onMusicClicked();" style="left:80px; top:910px"><img id="music_icon" src="../../images/music_on.png" /></a>
+        <a id="sound_button" class="icon_button" href="javascript: onSoundClicked();" style="left:270px; top:910px"><img id="sound_icon" src="../../images/sound_on.png" /></a>
+        <a id="lang_button" class="icon_button" href="play_zh.htm" style="left:450px; top:910px"><img id="lang_icon" src="../../images/lang_tw.png" /></a>
+
+    </div>
+
+    <!-- div class="debug_view">
+        <span id="debug_msgs">(Debug messages)</span>
+    </div -->
+
+    <img id="balls"    class="preloaded" src="balls.png" />
+    <img id="desktop"  class="preloaded" src="desktop.png" />
+    <img id="arrow"    class="preloaded" src="arrow.png" />
+    <img id="bomb"     class="preloaded" src="bomb.png" />
+    <img id="explode"  class="preloaded" src="explode.png" />
+
+    <audio id="shot_sfx"     preload="none" src="../../sounds/shotball.mp3" style="display:none" />
+    <audio id="collide_sfx"  preload="none" src="../../sounds/collision.mp3" style="display:none" />
+    <audio id="glass_sfx"    preload="none" src="../../sounds/glass.mp3" style="display:none" />
+    <audio id="explode_sfx"  preload="none" src="../../sounds/explode.mp3" style="display:none" />
+    <audio id="succeed_sfx"  preload="none" src="../../sounds/clap.mp3" style="display:none" />
+    <audio id="gameover_sfx" preload="none" src="../../sounds/lose.mp3" style="display:none" />
+
+    <audio id="hahaha_sfx" preload="none" src="../../sounds/girl_hahaha.mp3" style="display:none" />
+    <audio id="laugh2_sfx" preload="none" src="../../sounds/girl_laugh2.mp3" style="display:none" />
+    <audio id="yo_sfx"     preload="none" src="../../sounds/girl_yo.mp3" style="display:none" />
+    <audio id="huh_sfx"    preload="none" src="../../sounds/girl_huh.mp3" style="display:none" />
+    <audio id="laugh1_sfx" preload="none" src="../../sounds/girl_laugh1.mp3" style="display:none" />
+    <audio id="angry_sfx"  preload="none" src="../../sounds/girl_angry.mp3" style="display:none" />
+    <audio id="hey_sfx"    preload="none" src="../../sounds/girl_hey.mp3" style="display:none" />
+
+</body>
+
+</html>

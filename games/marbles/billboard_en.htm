@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="en-us" />
+    <link rel="stylesheet" href="../../game.css" type="text/css" />
+    <link rel="stylesheet" href="../../game_rwd.css" type="text/css" />
+    <script type="text/javascript" src="../../scripts/gsbillboard-1.2-min.js"></script>
+    <script type="text/javascript" src="../../scripts/gsmath-1.2-utils-min.js"></script>
+    <title>Emoji Marbles - shukaiyangtw.github.io</title>
+
+    <style type="text/css">
+        td {  padding:8px  }
+        td.num_label   {  width:10%;  text-align: center;  color: DarkTurquoise;  }
+        td.date_label  {  width:20%;  text-align: center;  color: LightSteelBlue;  }
+        td.name_label  {  width:40%;  text-align: center;  color: LightSkyBlue;  }
+        td.score_label {  width:30%;  text-align: center;  color: AliceBlue;  }
+    </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZMVB64F3RX"></script>
+
+    <script type="text/javascript">
+
+        const GAME_TAG = "marbles";
+
+        /* String Table: */
+        const STR_ENTER_UR_NAME = "Your score is about to be listed. Please enter your name?";
+        const STR_ARE_YOU_SURE = "Are you sure to clear the records?";
+        const BILLBOARD_URL = "billboard_en.htm";
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-ZMVB64F3RX');
+
+    </script>
+
+    <script type="text/javascript" src="../../scripts/game_bill.js"></script>
+
+</head>
+
+<body>
+
+    <div class="arena_div">
+
+        <h1>Local Billboard</h1>
+
+        <span class="explanation">The scores are only listed in this web browser, they will not transmitted via internet.</span>
+
+        <table id="billboard" border="0" style="max-width:960px; margin:1em auto">
+        </table>
+
+        <p style="margin: 1em;">
+            <a class="push_button" href="javascript: onClearClicked();" style="display:inline-block">Clear</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="push_button" href="play_en.htm" style="display:inline-block">Return</a>
+        </p>
+        <p>&nbsp;</p>
+
+    </div>
+
+</body>
+
+</html>
