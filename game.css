@@ -1,0 +1,268 @@
+﻿*
+{   margin: 0;
+    padding: 0;  }
+
+html, body
+{
+    width: 100%;
+    height: 100%;
+}
+
+body
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+    text-align: center;
+    color: AliceBlue;
+
+    background-color: black;
+    background-image: url('images/arenabg.jpg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+a
+{
+    color: LightSkyBlue;
+    text-decoration:none;
+}
+
+a:active
+{
+    text-decoration:underline
+}
+
+a:hover
+{
+    color: Cyan;
+    text-decoration:underline
+}
+
+h1
+{
+    margin: 0.5em;
+    color: LightSkyBlue;
+    letter-spacing: 0.3em;
+    text-shadow: 0px 0px 8px yellow;
+}
+
+h2
+{
+    color: LightGreen;
+    margin: 0.4em;
+}
+
+h3
+{
+    color: GhostWhite;
+    margin: 0.3em;
+}
+
+img.preloaded
+{
+    display: none;
+    border-style: none;
+}
+
+/* Container Styles ---------------------------------------------------------------------------- */
+
+div.arena_div
+{
+    width: 1524px;
+    min-height: 500px;
+    position: relative;
+    margin: 0 auto;
+
+    font-size: 24pt;
+    font-weight: bold;
+
+ /* border: 1px solid gray; */
+}
+
+div.arena_vert
+{
+    width: 600px;
+    min-height: 1000px;
+    position: relative;
+    margin: 0 auto;
+
+    font-size: 24pt;
+    font-weight: bold;
+
+ /* border: 1px solid gray; */
+}
+
+.game_viewport
+{
+ /* width: 1512px;
+    height: 850px; */
+    margin: 0 auto;
+    position: relative;
+    background-color: gray;
+    border-style: none;
+ /* border: 1px solid black; */
+
+   -webkit-touch-callout: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+    user-select: none;
+
+ /* remove the delay of touch events on div elements: */
+   -ms-touch-action: none;
+	touch-action: none;
+}
+
+canvas.frame_buffer
+{
+    background-color: black;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+/* Text and Button Styles ---------------------------------------------------------------------- */
+
+span.game_title
+{
+    font-size: 48px;
+    text-align:center;
+    text-shadow: 0px 0px 20px yellow;
+    color: White;
+ /* border: 1px solid white; */
+}
+
+span.highlight
+{
+    font-weight: bold;
+    text-shadow: 0px 0px 10px yellow;
+    color: Cornsilk;
+}
+
+span.game_title
+{
+    font-size: 48px;
+    text-align: center;
+    text-shadow: 0px 0px 20px yellow;
+    color: Cyan;
+}
+
+span.explanation
+{
+    font-size: 36px;
+    text-align: justify;
+    text-shadow: 0px 0px 4px yellow;
+    color: AliceBlue;
+ /* border: 1px solid white; */
+}
+
+div.annotation
+{
+    position: absolute;
+    font-size: large;
+    text-align:left;
+    color: Gray;
+}
+
+div.main_button
+{
+    position: absolute;
+    left: 400px;
+    bottom: 100px;
+
+    width: 300px;
+    height: 100px;
+ /* border: 1px solid gray; */
+
+    text-align: center;
+    font-size: x-large;
+    text-shadow: 0px 0px 10px yellow;
+    color: White;
+}
+
+div.main_button img
+{
+    width: 64px;
+    height: 64px;
+    border-style: none;
+}
+
+div.debug_view
+{
+    position:absolute;
+    left: 10px;
+    top: 30px;
+    padding: 8px;
+
+    color: white;
+    background-color: rgb(0.0, 0.0, 0.0, 0.4);
+}
+
+div.debug_view *
+{
+    position: static;
+    font-size: 16px;
+}
+
+a.push_button
+{
+    display: block;
+
+    font-size: 48px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    background-color: LemonChiffon;
+    color: black;
+
+    width: 300px;
+    height: 70px;
+
+    padding: 8px 10px;
+    box-shadow: 1px 1px 6px 6px rgba(40%,20%,20%,0.5) inset;
+    border-radius: 15px;
+
+    vertical-align: middle;
+ /* border: 1px solid white; */
+}
+
+a.icon_button
+{
+    display: block;
+    border: none;
+}
+
+a.icon_button img
+{
+    width: 64px;
+    height: 64px;
+}
+
+p.para
+{
+    color: LightSteelBlue;
+    text-indent: 2em;
+    text-align: justify;
+    margin: 0.5em 0;
+}
+
+img.float_figure
+{
+    float: right;
+    margin: 16px;
+    max-width: 100%;
+    border-radius: 16px;
+}
+
+p.credit
+{
+    text-align: center;
+    color: LightSlateGray;
+    font-size: smaller;
+}
+
+p.credit a
+{   color: CornflowerBlue;  }
+
